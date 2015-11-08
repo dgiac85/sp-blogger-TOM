@@ -2,7 +2,7 @@
 
 angular.module('spBlogger.posts',['spBlogger.posts.controllers','spBlogger.posts.services']);
 
-angular.module('spBlogger.posts').config(['$stateProvider',function($stateProvider){
+angular.module('spBlogger.posts').config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
 	$stateProvider.state('allPosts',{
 		url:'/posts',
 		templateUrl: 'modules/posts/views/posts.html',
@@ -13,5 +13,7 @@ angular.module('spBlogger.posts').config(['$stateProvider',function($stateProvid
 		templateUrl: 'modules/posts/views/singlePost.html',
 		controller: 'PostDetailsController'
 	});
+
+	$urlRouterProvider.otherwise('/');
 
 }]);

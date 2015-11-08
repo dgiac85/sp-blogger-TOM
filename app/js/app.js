@@ -2,11 +2,14 @@
 
 var routerApp=angular.module('spBlogger',['ui.router','spBlogger.posts']);
 
-routerApp.config(['$locationProvider',function($locationProvider){
+routerApp.config(['$locationProvider','$urlRouterProvider',function($locationProvider,$urlRouterProvider){
 	 $locationProvider.html5Mode(false);
+
+
 }]);
 
 routerApp.run(['$state',function($state){
 	  
       $state.go('allPosts');
+
 }]);
