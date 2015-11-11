@@ -5,7 +5,7 @@ angular.module('spBlogger.admin',['spBlogger.admin.controllers','spBlogger.admin
 angular.module('spBlogger.admin').config(['$stateProvider',function($stateProvider){
 	$stateProvider.state('admin',{
 		url:'/admin',
-		abstract:true,
+		abstract:true, //vuol dire che gli altri controller sotto di lui sono suoi figli
 		controller:'AdminController',
 		templateUrl:'modules/admin/views/admin-home.html'
 	});
