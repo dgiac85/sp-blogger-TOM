@@ -1,6 +1,6 @@
-/*'use strict'*/
+'use strict'
 
-angular.module('spBlogger.admin.services', []);/*.factory('Post',['$resource','API_ENDPOINT',function($resource,API_ENDPOINT){
+angular.module('spBlogger.admin.services', []);.factory('Post',['$resource','API_ENDPOINT',function($resource,API_ENDPOINT){
     return $resource(API_ENDPOINT, { id: '@_id' }, {
         update: {
             method: 'PUT'
@@ -10,7 +10,8 @@ angular.module('spBlogger.admin.services', []);/*.factory('Post',['$resource','A
     this.showPopup=function(message){
         return $window.confirm(message); //Ask the users if they really want to delete the post entry
     }
-}]).factory('authService',['AUTH_ENDPOINT','LOGOUT_ENDPOINT','$http','$cookieStore',function(AUTH_ENDPOINT,LOGOUT_ENDPOINT,$http,$cookieStore){
+}]);
+/*.factory('authService',['AUTH_ENDPOINT','LOGOUT_ENDPOINT','$http','$cookieStore',function(AUTH_ENDPOINT,LOGOUT_ENDPOINT,$http,$cookieStore){
 
     var auth={};
 
@@ -34,7 +35,9 @@ angular.module('spBlogger.admin.services', []);/*.factory('Post',['$resource','A
 }]);
 
 
+*/
 angular.module('spBlogger.admin.services').value('API_ENDPOINT','http://spblogger-sitepointdemos.rhcloud.com/api/posts/:id'); // This is our end point
+/*
 angular.module('spBlogger.admin.services').value('AUTH_ENDPOINT','http://spblogger-sitepointdemos.rhcloud.com/login');
 angular.module('spBlogger.admin.services').value('LOGOUT_ENDPOINT','http://spblogger-sitepointdemos.rhcloud.com/logout');*/
 

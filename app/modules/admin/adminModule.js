@@ -1,5 +1,6 @@
 'use strict'
-
+ 
+ 
 angular.module('spBlogger.admin',['spBlogger.admin.controllers','spBlogger.admin.services']);
 
 angular.module('spBlogger.admin').config(['$stateProvider',function($stateProvider){
@@ -16,7 +17,7 @@ angular.module('spBlogger.admin').config(['$stateProvider',function($stateProvid
 		templateUrl:'modules/admin/views/admin-new-post.html'
 	});
 
-	/*$stateProvider.state('admin.postUpdate',{
+	$stateProvider.state('admin.postUpdate',{
 		url:'/posts/:id/edit',
 		controller: 'PostUpdateController',
 		templateUrl:'modules/admin/views/admin-update-post.html'
@@ -26,6 +27,6 @@ angular.module('spBlogger.admin').config(['$stateProvider',function($stateProvid
 		url:'',
 		controller: 'PostListController',
 		templateUrl:'modules/admin/views/admin-all-posts.html'
-	});*/
+	});
 	
 }]);

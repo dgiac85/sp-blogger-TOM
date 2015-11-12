@@ -5,9 +5,14 @@ module.exports = function(config){
     files : [
       'app/lib/angular/angular.js',
       'app/lib/angular/angular-*.js',
+      'app/lib/angular-ui-router/angular-*.js',//for ui.router module
       'test/lib/angular/angular-mocks.js',
-      'app/js/**/*.js',
-      'test/unit/**/*.js'
+      'app/js/**/*.js', 
+      'app/modules/postModule.js',
+      'app/modules/**/*.js', //for our app modules
+
+      
+      'test/unit/servicesSpec.js'
     ],
 
     exclude : [
